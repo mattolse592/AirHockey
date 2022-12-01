@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Simple Air hockey game
+//Matthew Olsen December 1, 2022
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,8 +34,8 @@ namespace AirHockey
         Rectangle player2bottom = new Rectangle(765, 264, 30, 1);
 
         Rectangle ball = new Rectangle(100, 245, 10, 10);
-        Rectangle net1 = new Rectangle(0, 100, 5, 300);
-        Rectangle net2 = new Rectangle(795, 100, 5, 300);
+        Rectangle net1 = new Rectangle(0, 150, 5, 200);
+        Rectangle net2 = new Rectangle(795, 150, 5, 200);
 
         Font scoreFont = new Font("MS Gothic", 16, FontStyle.Bold);
 
@@ -64,6 +66,7 @@ namespace AirHockey
         SolidBrush blueBrush = new SolidBrush(Color.DodgerBlue);
         SolidBrush redBrush = new SolidBrush(Color.Red);
         Pen whitePen = new Pen(Color.White, 3);
+        Pen redPen = new Pen(Color.Red, 3);
 
 
         public Form1()
@@ -153,6 +156,8 @@ namespace AirHockey
 
             e.Graphics.DrawString($"{player1Score}", scoreFont, whiteBrush, player1center.X + 6, player1center.Y + 5);
             e.Graphics.DrawString($"{player2Score}", scoreFont, whiteBrush, player2center.X + 6, player2center.Y + 5);
+            e.Graphics.DrawEllipse(redPen, -150, 100, 300, 300);
+            e.Graphics.DrawEllipse(redPen, 650, 100, 300, 300);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
