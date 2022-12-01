@@ -67,6 +67,7 @@ namespace AirHockey
         SolidBrush redBrush = new SolidBrush(Color.Red);
         Pen whitePen = new Pen(Color.White, 3);
         Pen redPen = new Pen(Color.Red, 3);
+        Pen bluePen = new Pen(Color.DodgerBlue, 5);
 
 
         public Form1()
@@ -158,6 +159,7 @@ namespace AirHockey
             e.Graphics.DrawString($"{player2Score}", scoreFont, whiteBrush, player2center.X + 6, player2center.Y + 5);
             e.Graphics.DrawEllipse(redPen, -150, 100, 300, 300);
             e.Graphics.DrawEllipse(redPen, 650, 100, 300, 300);
+            e.Graphics.DrawEllipse(bluePen, 300, 150, 200, 200);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)

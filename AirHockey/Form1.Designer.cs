@@ -55,7 +55,7 @@
             this.winLabel.BackColor = System.Drawing.Color.Transparent;
             this.winLabel.Font = new System.Drawing.Font("MS Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.White;
-            this.winLabel.Location = new System.Drawing.Point(310, 250);
+            this.winLabel.Location = new System.Drawing.Point(310, 240);
             this.winLabel.Name = "winLabel";
             this.winLabel.Size = new System.Drawing.Size(180, 21);
             this.winLabel.TabIndex = 1;
